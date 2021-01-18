@@ -37,7 +37,12 @@ class SpiralChart {
             return vis.NUMSPIRALS * Math.PI * r;
         };
 
-        var color = d3.scaleOrdinal(d3.schemeCategory10);
+        // var color = d3.scaleOrdinal(d3.schemeCategory10);
+        
+        var color = d3.scaleOrdinal()
+      .domain([1, 20])
+      // .range(['#1383EC', '#EC7C13']);
+        .range(['#7AD5FF', '#FFA57A']);
         var r = d3.min([vis.WIDTH, vis.HEIGHT]) / 2 - 40;
 
         var radius = d3.scaleLinear()
